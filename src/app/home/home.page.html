@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="back">
+ <ion-card color="info">
+   <ion-card-title>
+     <h2>Catalogue des PFEs</h2>
+   </ion-card-title>
+ </ion-card>
+ <ion-button color="warning"(click)="lien1();">
+   <ion-icon slot="start" name="add-circle-outline" > </ion-icon>
+   Ajouter un étudiant
+ </ion-button>
+ <!--<ion-list class="tr">
+  <ion-item *ngFor="let et of pfe">
+  <ion-label>
+  <h2>{{et.titre}} {{et.nom}}</h2> 
+  <p>{{et.groupe}}</p>
+  </ion-label>
+  <ion-note slot="end">
+    <ion-button color="danger" (click)="supp(et);">DEL</ion-button>
+    <ion-button color="secondary" (click)="update(et);">MODIF</ion-button>
+
+  </ion-note>
+</ion-item>
+ </ion-list>
+-->
+<ion-card *ngFor="let et of pfe"> 
+  <ion-card-header>
+  <ion-card-subtitle>Titre</ion-card-subtitle>
+  <ion-card-title>{{et.titre}}</ion-card-title>
+  <ion-card-subtitle>etudiant</ion-card-subtitle>
+  <ion-card-title>{{et.etudiant}}</ion-card-title>
+  <ion-card-subtitle>enseignant</ion-card-subtitle>
+  <ion-card-title>{{et.enseignant}}</ion-card-title>
+  <ion-button color="danger" (click)="supp(et);">
+   supprumer un Etudiant
+  </ion-button>
+  </ion-card-header>
+  <ion-card-content>
+  </ion-card-content> 
+ </ion-card>
+</ion-content>

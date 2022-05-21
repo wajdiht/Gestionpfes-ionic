@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="back">
+  <ion-card color="success">
+    <ion-card-title class="ion-text-center">
+      <h2>Ajouter PFE</h2>
+    </ion-card-title>
+
+  </ion-card>
+    <ion-item>
+      <ion-label position="floating">Titre</ion-label>
+      <ion-input type="text" [(ngModel)]="titre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Etudiant</ion-label>
+        <ion-input type="text" [(ngModel)]="etudiant"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Enseignant</ion-label>
+          <ion-input type="text" [(ngModel)]="enseignant"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Type</ion-label>
+            <ion-input type="text" [(ngModel)]="type"></ion-input>
+            </ion-item>
+          <ion-button color="primary"  expand="full" (click)="ajouter();">Ajouter</ion-button>
+  
+</ion-content>
